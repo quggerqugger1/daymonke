@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dm-serif-text {
+    font-family: "DM Serif Text", serif;
+    font-weight: 100;
+    font-style: normal;
+    color: #000000;
+    font-size: 32px;
+    user-select: none;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    color: black;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    white-space: nowrap;
+    background-color: black;
+}
+
+.marquee {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    will-change: transform;
+    font-family: "DM Serif Text", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 18px;
+    user-select: none;
+}
+
+.marquee-point {
+    text-decoration: none;
+    color: white;         
+}
+
+#marquee-text {
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: 6px;
+    word-spacing: 12px;
+}
+
+.footer-text {
+    position: absolute;
+    bottom: -600px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    font-family: "DM Serif Text", serif;
+    font-weight: 100;
+    font-style: normal;
+    color: black;
+    user-select: none;
+    letter-spacing: 15px;
+}
+
+.photo{
+    height: 250x;
+    width: 250px;
+}
+
+/* Стили для плавного исчезновения и появления */
+.hidden {
+    opacity: 0;
+    pointer-events: none; /* Не позволяет клики на скрытый текст */
+    transition: opacity 0.1s ease;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    transition-delay: 0.5s;
+}
