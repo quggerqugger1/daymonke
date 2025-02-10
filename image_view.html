@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMNK</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="gallery/dmlogo.png" type="image/png">
+</head>
+
+<body>
+    <div class="marquee-container">
+        <div class="marquee" id="marquee">
+            <a class="marquee-point" href="https://t.me/daymonke"><span id="marquee-text"></span></a>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <div class="back-container">
+            <a class="back" href="rozetka.html">Назад</a>
+        </div>
+        <img id="image-view" src="" alt="Увеличенное изображение" class="image-view">
+    </div>
+
+    <script>
+        // Получаем параметр URL с изображением
+        const urlParams = new URLSearchParams(window.location.search);
+        const imageSrc = urlParams.get('image');  // Получаем параметр 'image' из URL
+
+        // Устанавливаем изображение в тег img
+        if (imageSrc) {
+            document.getElementById('image-view').src = imageSrc;
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

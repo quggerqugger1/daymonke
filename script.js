@@ -121,3 +121,24 @@ setInterval(updateFooterDate, 3600000);
 
 // Инициализация даты при загрузке страницы
 updateFooterDate();
+
+// Функция для проверки видимости треклиста на экране
+function checkVisibility() {
+    const tracklist = document.querySelector('.tracklist');
+    const rect = tracklist.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Если верхняя часть треклиста вошла в видимую область
+    if (rect.top <= windowHeight) {
+        tracklist.classList.add('visible');
+    }
+}
+
+// Проверяем видимость сразу при загрузке страницы
+window.addEventListener('load', checkVisibility);
+
+// Проверяем видимость при прокрутке страницы
+window.addEventListener('scroll', checkVisibility);
+
+// ГАЛЕРЕЯ
+
