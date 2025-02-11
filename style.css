@@ -8,7 +8,14 @@ body {
     background-color: white;
     padding: 0;
     overflow-x: hidden;
+    overflow-x: auto; /* Сохраняет прокрутку */
+    scrollbar-width: none; /* Для Firefox */
+    -ms-overflow-style: none; /* Для Internet Explorer и Edge */
 }
+
+body::-webkit-scrollbar {
+    display: none; /* Для Chrome, Safari и Opera */
+  }
 
 .container {
     text-align: center;
