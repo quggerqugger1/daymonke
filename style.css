@@ -351,21 +351,28 @@ a {
 /* Медиазапрос для телефонов */
 @media screen and (max-width: 480px) {
     .gallery-container {
-        margin-bottom: -1300px; /* Еще больше уменьшаем отступ для маленьких экранов */
+        margin-bottom: -1000px; /* Еще больше уменьшаем отступ для маленьких экранов */
     }
 }
 
 /* Медиазапрос для телефонов */
 @media screen and (max-width: 768px) {
     .gallery-container {
-        margin-bottom: -1300px; /* Еще больше уменьшаем отступ для маленьких экранов */
+        margin-bottom: -1150px; /* Еще больше уменьшаем отступ для маленьких экранов */
     }
 }
 
 /* Медиазапрос для телефонов */
 @media screen and (max-width: 356px) {
     .gallery-container {
-        margin-bottom: -1400px; /* Еще больше уменьшаем отступ для маленьких экранов */
+        margin-bottom: -1200px; /* Еще больше уменьшаем отступ для маленьких экранов */
+    }
+}
+
+/* Медиазапрос для телефонов */
+@media screen and (max-width: 260px) {
+    .gallery-container {
+        margin-bottom: -1300px; /* Еще больше уменьшаем отступ для маленьких экранов */
     }
 }
 
