@@ -125,13 +125,13 @@ a {
     width: 100%;
     text-align: center;
     font-size: 24px;
-    padding: 20px;
     font-family: "DM Serif Text", serif;
     font-weight: 100;
     font-style: normal;
     color: black;
     user-select: none;
     letter-spacing: 15px;
+
     
 }
 
@@ -150,17 +150,23 @@ a {
     letter-spacing: 0px;
 }
 
+
 .subtext-date{
     font-size: 18px;
     letter-spacing: 0px;
     padding-bottom: 10px;
 }
 
+
 .title{
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+}
+
+.title-container{
+    text-align: center;    
 }
 
 .tracklist{
@@ -287,4 +293,90 @@ a {
     max-width: 90%;
     max-height: 80vh;
     object-fit: contain; /* Чтобы изображение было в пределах экрана */
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+
+    .gallery-item-link {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+    }
+
+    .gallery-item {
+        width: 200px;
+        height: 200px;
+    }
+
+    .gallery-container {
+        overflow: hidden;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Медиа-запрос для очень маленьких экранов (телефоны) */
+@media screen and (max-width: 480px) {
+    .gallery-item {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+.gallery {
+    -ms-overflow-style: none;  /* Скрываем скроллбар в IE и Edge */
+    scrollbar-width: none;  /* Скрываем скроллбар в Firefox */
+}
+
+/* Уменьшаем отрицательный отступ в .gallery-container */
+.gallery-container {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 50px;
+    user-select: none;
+
+}
+
+/* Медиазапрос для телефонов */
+@media screen and (max-width: 480px) {
+    .gallery-container {
+        margin-bottom: -1300px; /* Еще больше уменьшаем отступ для маленьких экранов */
+    }
+}
+
+/* Медиазапрос для телефонов */
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        margin-bottom: -1300px; /* Еще больше уменьшаем отступ для маленьких экранов */
+    }
+}
+
+/* Медиазапрос для телефонов */
+@media screen and (max-width: 356px) {
+    .gallery-container {
+        margin-bottom: -1400px; /* Еще больше уменьшаем отступ для маленьких экранов */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-container {
+        width: 90%;
+    }
 }
