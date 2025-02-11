@@ -112,7 +112,7 @@ body {
 .visible {
     opacity: 1;
     transition: opacity 0.5s ease;
-    transition-delay: 0.5s;
+    transition-delay: 0.8s;
 }
 
 a {
@@ -163,6 +163,8 @@ a {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+    align-items: center;
+    padding-left: 14px;
 }
 
 .title-container{
@@ -347,43 +349,63 @@ a {
     user-select: none;
 
 }
-
-/* Медиазапрос для телефонов */
 @media screen and (max-width: 480px) {
     .gallery-container {
-        margin-bottom: -1000px; /* Еще больше уменьшаем отступ для маленьких экранов */
+        margin-bottom: -1000px; 
+        width: 90%;
     }
 }
 
-/* Медиазапрос для телефонов */
 @media screen and (max-width: 768px) {
     .gallery-container {
-        margin-bottom: -1150px; /* Еще больше уменьшаем отступ для маленьких экранов */
+        margin-bottom: -1150px;
+        width: 90%;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+    .gallery-item-link {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+    }
+    .gallery-item {
+        width: 200px; 
+        height: 200px;
+    }
+    .gallery-container {
+        overflow: hidden;
+        width: 90%;
+        text-align: center;
     }
 }
 
-/* Медиазапрос для телефонов */
 @media screen and (max-width: 356px) {
     .gallery-container {
-        margin-bottom: -1200px; /* Еще больше уменьшаем отступ для маленьких экранов */
+        margin-bottom: -1200px; 
     }
 }
 
-/* Медиазапрос для телефонов */
 @media screen and (max-width: 260px) {
     .gallery-container {
-        margin-bottom: -1300px; /* Еще больше уменьшаем отступ для маленьких экранов */
+        margin-bottom: -1300px; 
     }
 }
 
-@media screen and (max-width: 768px) {
-    .gallery-container {
-        width: 90%;
+@media screen and (max-width: 720px) {
+    .gallery {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 10px;
     }
-}
-
-@media screen and (max-width: 480px) {
-    .gallery-container {
-        width: 90%;
+    .gallery-item {
+        width: 160px;  
+        height: 160px;
     }
 }
