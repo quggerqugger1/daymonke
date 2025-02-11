@@ -8,6 +8,11 @@ body {
     background-color: white;
     padding: 0;
     overflow-x: hidden;
+    scrollbar-width: none; /* Для Firefox */
+}
+
+.body::-webkit-scrollbar {
+    display: none; /* Для Chrome, Safari */
 }
 
 
@@ -70,7 +75,7 @@ body {
 .footer-text {
     position: absolute;
     bottom: -600px;
-    width: 100%;
+    width: fit-content;
     text-align: center;
     font-size: 24px;
     padding: 20px;
@@ -86,7 +91,7 @@ body {
 .galery {
     position: absolute;
     bottom: -1200px;
-    width: 100%;
+    width: fit-content;
     text-align: center;
     font-size: 24px;
     padding: 20px;
